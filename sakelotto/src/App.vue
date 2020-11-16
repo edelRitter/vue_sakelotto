@@ -1,24 +1,29 @@
 <template>
-  <div id="app">
+  <div id="app" class="wf-notosansjapanese">
     <sakeLottoHeader />
     <sakeLottoMain />
+    <sakeLottoFooter />
   </div>
 </template>
 
 <script>
 import sakeLottoHeader from './components/sakeLotto_header.vue'
 import sakeLottoMain from './components/sakeLotto_main.vue'
+import sakeLottoFooter from './components/sakeLotto_footer.vue'
 
 export default {
   name: 'App',
   components: {
     sakeLottoHeader,
-    sakeLottoMain
+    sakeLottoMain,
+    sakeLottoFooter
   }
 }
 </script>
 
 <style>
+@import './stylesheets/reset.css';
+
 body {
   padding: 0;
   margin: 0;
@@ -33,4 +38,5 @@ body {
 }
 .wf-hannari { font-family: "Hannari"; }
 .wf-notosansjapanese { font-family: "Noto Sans JP"; }
+
 </style>
