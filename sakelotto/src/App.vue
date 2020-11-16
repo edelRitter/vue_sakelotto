@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <sakeLottoIntro msg="酒みくじ"/>
+    <sakeLottoHeader />
     <sakeLottoMain />
   </div>
 </template>
 
 <script>
-import sakeLottoIntro from './components/sakeLotto_intro.vue'
+import sakeLottoHeader from './components/sakeLotto_header.vue'
 import sakeLottoMain from './components/sakeLotto_main.vue'
 
 export default {
   name: 'App',
   components: {
-    sakeLottoIntro,
+    sakeLottoHeader,
     sakeLottoMain
   }
 }
