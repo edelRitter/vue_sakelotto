@@ -4,7 +4,7 @@
     <form id="app" @submit="checkForm" action="/something" method="post">
       <div class="sakeLotto-options">
         <p>
-          <input type="submit" value="ドリンクをお探しですか？">  
+          <input type="submit" class="sakeLotto-submit" value="ドリンクをお探しですか？">  
         </p>
         <p v-if="errors.length" class="sakeLotto-error">
           <span>以下の項目の入力が必要です</span>
@@ -14,20 +14,22 @@
         </p>
         <p class="sakeLotto-input">
           <label for="drinkNum">オーダー数</label>
-          <input type="text" name="drinkNum" id="drinkNum" v-model="drinkNum">
+          <input type="text" name="drinkNum" id="drinkNum" v-model="drinkNum" placeholder="2">
           <span>杯</span>
         </p>
         <p class="sakeLotto-input">
-          <label for="drinkType">ドリンク種類</label>
-          <select name="drinkType" id="drinkType" v-model="drinkType">
-            <option>Star Wars</option>
-            <option>Vanilla Sky</option>
-            <option>Atomic Blonde</option>
-          </select>
+            <label for="drinkType">オーダー数</label>
+            <multiselect v-model="value" :options="options" :multiple="true" :close-on-select="false" :clear-on-select="false" :preserve-search="true" label="name" track-by="name" :preselect-first="true">
+                <template slot="selection" slot-scope="{ values, search, isOpen }">
+                    <span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">{{ values.length }} options selected</span>
+                </template>
+            </multiselect>
+            <span>杯</span>
         </p>
+        <pre class="language-json"><code>{{ value  }}</code></pre>
         <p class="sakeLotto-input">
           <label for="drinkDegree">度数</label>
-          <input type="number" name="drinkDegree" id="drinkDegree" v-model="drinkDegree" min="0">
+          <input type="number" name="drinkDegree" id="drinkDegree" v-model="drinkDegree" placeholder="99" min="0">
           <span>度以下</span>
         </p>
       </div>
@@ -37,6 +39,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'SakeLottoMain',
   props: {
@@ -47,7 +50,16 @@ export default {
       errors:[],
       drinkNum:null,
       drinkDegree:null,
-      drinkType:null
+      drinkType: null,
+      value: [],
+      options: [
+            { name: 'whiskey' },
+            { name: 'wine' },
+            { name: 'scotch' },
+            { name: 'beer' },
+            { name: 'shochu' },
+            { name: 'sake' }
+      ]
     }
   },
   methods:{
@@ -106,9 +118,26 @@ h2 {
   box-sizing: border-box;
   padding: 8px 8px;
   margin: 0 4px 0 0;
+  text-align: right;
 }
 .sakeLotto-options .sakeLotto-input span {
   font-size: 12px;
+}
+.multiselect {
+  clear: both;
+}
+.sakeLotto-submit {
+  box-sizing: border-box;
+  width: 50%;
+  appearance: none;
+  margin: 20px auto;
+  outline: none;
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #333333;
+  border-radius: 4px;
+
+  background: #ffffff;
 }
 .sakeLotto-error {
   margin: 8px 0;
@@ -124,6 +153,10 @@ h2 {
   }
   .sakeLotto-options .sakeLotto-input label {
     font-size: 12px;
+  }
+  .sakeLotto-submit {
+    width: 75%;
+    font-size: 3vw;
   }
 }
 </style>

@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^3.7.0",
     "vue": "^2.6.12",
+    "vue-multiselect": "^2.1.6",
     "vue-social-sharing": "^3.0.3"
   },
   "devDependencies": {
