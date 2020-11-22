@@ -9,6 +9,11 @@
         </a>
       </div>
     </div>
+
+  <p class="sakeLotto-footer-warning">
+    本サイトは過度の飲酒を助長するものではありません。お酒の飲みすぎに注意してください。<br>
+    未成年の飲酒は法律で禁止されています。飲酒運転は法律で禁止されています。<br>
+    妊娠中や授乳期の飲酒は、胎児、乳児の発育に悪影響を与えるおそれがあります。</p>  
   </div>
 </template>
 
@@ -50,6 +55,15 @@ export default {
   margin: 0 auto;
   text-align: center;
 }
+.sakeLotto-footer-warning {
+  clear: both;
+  position: relative;
+  box-sizing: border-box;
+  max-width: 600px;
+  margin: 40px auto;
+  font-size: 11px;
+  color: #333333;
+}
 @media only screen and (max-width: 620px) {
   .sakeLotto-adFloating .sakeLotto-adFloating-bg {
     position: relative;
@@ -61,6 +75,13 @@ export default {
     height: auto;
     margin: 0 auto;
     text-align: center;
+  }
+  .sakeLotto-footer-warning {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .sakeLotto-footer-warning br {
+    display: none;
   }
 }
 </style>

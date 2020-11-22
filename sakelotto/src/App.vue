@@ -23,6 +23,7 @@ export default {
 
 <style>
 @import './stylesheets/reset.css';
+@import './stylesheets/vue_mutiselect.css';
 
 body {
   padding: 0;

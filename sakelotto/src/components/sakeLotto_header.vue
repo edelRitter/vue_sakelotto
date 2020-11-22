@@ -4,8 +4,9 @@
       <div class="sakeLotto-banner">
         <sakeLottoUIShare />
         <p><img src="../assets/images/bar_demo_logo.png" width="100%"></p>
+        <h1 class="wf-notosansjapanese"><span>酒</span>みくじへようこそ</h1>
         <p class="sakeLotto-banner-bdr"></p>
-        <h1 class="wf-notosansjapanese"><span>酒</span>みくじ</h1>
+        <p>新しいお酒を飲んでみませんか</p>
       </div>
     </div>
   </div>
@@ -29,7 +30,6 @@ export default {
 h1 {
   font-size: 3vw;
   font-weight: 400;
-  letter-spacing: 1em;
   margin: 0 0 0 5%;
 }
 .sakeLotto-intro {
@@ -41,8 +41,7 @@ h1 {
   position: relative;
   max-width: 1080px;
   margin: 0 auto;
-  padding: 80px 0;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 .sakeLotto-banner {
   box-sizing: border-box;
