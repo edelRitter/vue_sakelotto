@@ -2,9 +2,9 @@
   <div class="sakeLotto-content">
     <h2>お酒を探す</h2>
 
-    <div class="sakeLotto-result">
+    <div class="sakeLotto-result" v-show="showFormValues">
       <div class="sakeLotto-result-wrap">
-        <vue-aos animation-class="fadeIn animated" threshold="0.5">
+        <vue-aos animation-class="fadeIn animated">
           <div class="sakeLotto-result-item">
             <div class="sakeLotto-result-itemName">Jack Daniels</div>
             <div class="sakeLotto-result-itemType">文字数8あたり…</div>
@@ -17,6 +17,7 @@
             <div class="sakeLotto-result-itemName">Jack Daniels</div>
             <div class="sakeLotto-result-itemType">Whisky</div>
             <div class="sakeLotto-result-itemDegree">20度</div>
+            <sakeLottoUIShare />
           </div>
         </vue-aos>
         <vue-aos animation-class="fadeIn animated">
@@ -24,6 +25,7 @@
             <div class="sakeLotto-result-itemName">Jack Daniels</div>
             <div class="sakeLotto-result-itemType">Whisky</div>
             <div class="sakeLotto-result-itemDegree">20度</div>
+            <sakeLottoUIShare />
           </div>
         </vue-aos>
       </div>
@@ -32,8 +34,8 @@
     <form id="app" @submit="checkForm" action="/something" method="post">
       <vue-aos animation-class="fadeIn animated">
         <div class="sakeLotto-options">
-          <p>
-            <input type="submit" class="sakeLotto-submit" value="くじをひく">  
+          <p class="sakeLotto-submit-area">
+            <input type="submit" name="submitbtn" id="submitbtn" class="sakeLotto-submit" value="くじをひく">  
           </p>
           <p v-if="errors.length" class="sakeLotto-error">
             <span>以下の項目の入力が必要です</span>
@@ -47,16 +49,10 @@
             <span>杯</span>
           </p>
           <p class="sakeLotto-input">
-              <label for="drinkType">ドリンク種類</label>
-              <multiselect 
-              v-model="value" :options="options" :multiple="true" :close-on-select="false" :clear-on-select="false" :preserve-search="true" label="name" track-by="name" >
-                <template slot="selection" slot-scope="{ values, search, isOpen }">
-                  <span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">{{ values.length }}</span>
-                </template>
-              </multiselect>
-              <span></span>
+            <label class="typo__label">ドリンク種類</label>
+            <multiselect v-model="value" tag-placeholder="ドリンクの種類を選ぶ" placeholder="ドリンクの種類を選ぶ" label="name" track-by="name" :options="options" :multiple="true" :taggable="true" @tag="addTag"></multiselect>
           </p>
-          <pre class="language-json"></pre>
+          <pre class="language-json">{{ value.name }}</pre>
           <p class="sakeLotto-input">
             <label for="drinkDegree">度数</label>
             <input type="number" name="drinkDegree" id="drinkDegree" v-model="drinkDegree" placeholder="99" min="0">
@@ -83,18 +79,22 @@ export default {
   },
   data() {
     return {
+      showFormValues:false,
       errors:[],
       drinkNum:null,
       drinkDegree:null,
       drinkType: null,
-      value: [],
+      value: [
+        { name: 'ウィスキー'}
+      ],
       options: [
-            { name: 'whiskey' },
-            { name: 'wine' },
-            { name: 'scotch' },
-            { name: 'beer' },
-            { name: 'shochu' },
-            { name: 'sake' }
+        { name: 'ウィスキー'},
+        { name: 'ワイン'},
+        { name: '日本酒'},
+        { name: '焼酎'},
+        { name: 'スコッチ'},
+        { name: 'ウォッカ'},
+        { name: 'ラム'}
       ]
     }
   },
@@ -105,6 +105,13 @@ export default {
       if(!this.drinkNum) this.errors.push("オーダー数を入力してください");
       if(!this.drinkDegree) this.errors.push("度数を入力してください");
       e.preventDefault();
+    },
+    addTag (newTag) {
+      const tag = {
+        name: newTag
+      }
+      this.options.push(tag)
+      this.value.push(tag)
     }
   }
 }
@@ -118,12 +125,11 @@ h2 {
   opacity: 0;
   visibility: hidden;
 }
-
 .sakeLotto-result {
   clear: both;
   margin: 0 auto;
   max-width: 960px;
-  width: 80%;
+  width: 86%;
 }
 .sakeLotto-result .sakeLotto-result-wrap {
   margin: 40px auto;
@@ -160,13 +166,12 @@ h2 {
   font-size: 14px;
   width: 10%;
 }
-
 .sakeLotto-options {
   clear: both;
   position: relative;
   box-sizing: border-box;
   max-width: 960px;
-  width: 80%;
+  width: 86%;
   margin: 40px auto;
   padding: 24px 12px;
   border-radius: 4px;
@@ -184,13 +189,17 @@ h2 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: stretch;
-  margin: 12px 0;
+  margin: 24px 0;
   font-size: 14px;
 }
 .sakeLotto-options .sakeLotto-input label {
-  font-size: 14px;
   width: 30%;
-  text-align: left;
+  margin: 0 8px 0 0;
+  text-align: right;
+  font-size: 14px;
+}
+.sakeLotto-options .sakeLotto-input input {
+  font-size: 16px;
 }
 .sakeLotto-options .sakeLotto-input input,
 .sakeLotto-options .sakeLotto-input select {
@@ -206,17 +215,31 @@ h2 {
 .sakeLotto-options .sakeLotto-input span {
   font-size: 12px;
 }
+.sakeLotto-submit-area {
+  position: relative;
+  margin: 20px auto;
+}
 .sakeLotto-submit {
   box-sizing: border-box;
-  width: 50%;
+  width: 80%;
+  max-width: 400px;
   appearance: none;
-  margin: 20px auto;
   outline: none;
-  font-size: 14px;
-  padding: 8px;
-  border: 1px solid #8f8f8f;
+  font-size: 18px;
+  padding: 12px;
+  border: 1px solid #333333;
   border-radius: 4px;
+  color: #333333;
   background: #ffffff;
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+.sakeLotto-submit:hover {
+  color: #ffffff;
+  background: #333333;
+  border: 1px solid #333333;
 }
 .sakeLotto-error {
   margin: 8px 0;
@@ -228,11 +251,11 @@ h2 {
 
 @media only screen and (max-width: 620px) {
   .sakeLotto-result {
-    max-width: 88%;
+    max-width: 86%;
   }
   .sakeLotto-options {
     margin: 40px auto;
-    max-width: 88%;
+    max-width: 86%;
   }
   .sakeLotto-options .sakeLotto-input label {
     font-size: 12px;
@@ -256,6 +279,26 @@ h2 {
   }
   .sakeLotto-result .sakeLotto-result-wrap .sakeLotto-result-item {
     flex-wrap: wrap;
+  }
+  .sakeLotto-options .sakeLotto-input label {
+    width: 100%;
+    text-align: left;
+  }
+  .sakeLotto-options .sakeLotto-input input,
+  .sakeLotto-options .sakeLotto-input select {
+    width: 80%;
+  }
+  .multiselect {
+    width: 100%;
+  }
+  .sakeLotto-options .sakeLotto-input span {
+    text-align: left;
+    width: 16%;
+  }
+  .sakeLotto-submit {
+    color: #ffffff;
+    background: #333333;
+    border: 1px solid #333333;
   }
   .sakeLotto-share {
     width: 100%;

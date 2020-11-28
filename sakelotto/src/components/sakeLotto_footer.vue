@@ -1,9 +1,9 @@
 <template>
   <div class="sakeLotto-bottom">
 
-    <div class="sakeLotto-adFloating">
+    <div class="sakeLotto-adFloating" v-if="!isHidden">
       <div class="sakeLotto-adFloating-bg">
-        <div v-on:click="isHidden = true" class="sakeLotto-adFloating-close">test</div>
+        <div v-on:click="isHidden = true" class="sakeLotto-adFloating-close"></div>
         <a href="">
           <p><img src="../assets/images/ad_demo_image.png" width="1080"></p>
         </a>
@@ -37,12 +37,33 @@ export default {
   width: 100%;
   max-height: 83px;
   background: #fff4d8;
-  z-index: 999;
+  z-index: 9;
 }
 .sakeLotto-adFloating .sakeLotto-adFloating-close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -15px;
+  right: 5%;
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  border: 1px solid #333333;
+  background: #ffffff;
+}
+.sakeLotto-adFloating .sakeLotto-adFloating-close::before,
+.sakeLotto-adFloating .sakeLotto-adFloating-close::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 14px;
+  width: 1px;
+  background-color: #333333;
+}
+.sakeLotto-adFloating .sakeLotto-adFloating-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.sakeLotto-adFloating .sakeLotto-adFloating-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 .sakeLotto-adFloating .sakeLotto-adFloating-bg {
   position: relative;

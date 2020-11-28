@@ -26,7 +26,7 @@ export default {
 @import './stylesheets/vue_mutiselect.css';
 
 body {
-  padding: 0;
+  padding: 0 0 80px 0;
   margin: 0;
   background: #f1f1f1;
 }
