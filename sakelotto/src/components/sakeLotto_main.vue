@@ -6,25 +6,40 @@
       <div class="sakeLotto-result-wrap">
         <vue-aos animation-class="fadeIn animated">
           <div class="sakeLotto-result-item">
-            <div class="sakeLotto-result-itemName">Jack Daniels</div>
-            <div class="sakeLotto-result-itemType">文字数8あたり…</div>
-            <div class="sakeLotto-result-itemDegree">20度</div>
+            <div class="sakeLotto-result-item-top">
+              <p class="sakeLotto-result-itemName">Jack Daniels</p>
+              <p class="sakeLotto-result-itemType">ウィスキー</p>
+              <p class="sakeLotto-result-itemDegree">20％</p>
+            </div>
+            <div class="sakeLotto-result-item-bottom">
+              <p class="sakeLotto-result-itemDesc">test</p>
+            </div>
             <sakeLottoUIShare />
           </div>
         </vue-aos>
         <vue-aos animation-class="fadeIn animated">
           <div class="sakeLotto-result-item">
-            <div class="sakeLotto-result-itemName">Jack Daniels</div>
-            <div class="sakeLotto-result-itemType">Whisky</div>
-            <div class="sakeLotto-result-itemDegree">20度</div>
+            <div class="sakeLotto-result-item-top">
+              <p class="sakeLotto-result-itemName">マール・ド・ブルゴーニュ</p>
+              <p class="sakeLotto-result-itemType">ワイン</p>
+              <p class="sakeLotto-result-itemDegree">40％</p>
+            </div>
+            <div class="sakeLotto-result-item-bottom">
+              <p class="sakeLotto-result-itemDesc">至高のブルゴーニュワインを追い求める者にとって、唯一無二であり、絶対の存在、ドメーヌ・コント・ジョルジュ・ド・ヴォギュエ。</p>
+            </div>
             <sakeLottoUIShare />
           </div>
         </vue-aos>
         <vue-aos animation-class="fadeIn animated">
           <div class="sakeLotto-result-item">
-            <div class="sakeLotto-result-itemName">Jack Daniels</div>
-            <div class="sakeLotto-result-itemType">Whisky</div>
-            <div class="sakeLotto-result-itemDegree">20度</div>
+            <div class="sakeLotto-result-item-top">
+              <p class="sakeLotto-result-itemName">アイテルスバッハー・カルトホイザー・ホーフベルグ・クローネンベルク・リースリング・トロッケンベーレンアウスレーゼ</p>
+              <p class="sakeLotto-result-itemType">ワイン</p>
+              <p class="sakeLotto-result-itemDegree">40％</p>
+            </div>
+            <div class="sakeLotto-result-item-bottom">
+              <p class="sakeLotto-result-itemDesc">至高のブルゴーニュワインを追い求める者にとって、唯一無二であり、絶対の存在、ドメーヌ・コント・ジョルジュ・ド・ヴォギュエ。</p>
+            </div>
             <sakeLottoUIShare />
           </div>
         </vue-aos>
@@ -79,7 +94,7 @@ export default {
   },
   data() {
     return {
-      showFormValues:false,
+      showFormValues:true,
       errors:[],
       drinkNum:null,
       drinkDegree:null,
@@ -125,6 +140,9 @@ h2 {
   opacity: 0;
   visibility: hidden;
 }
+
+/* sakeLotto Results
+-------------------- */
 .sakeLotto-result {
   clear: both;
   margin: 0 auto;
@@ -136,8 +154,6 @@ h2 {
 }
 .sakeLotto-result .sakeLotto-result-wrap .sakeLotto-result-item {
   position: relative;
-  display: flex;
-  align-items: center;
   box-sizing: border-box;
   padding: 8px;
   margin: 12px 0;
@@ -148,24 +164,37 @@ h2 {
   -moz-transition: 0.4s ease-in-out;
   -o-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
+  text-align: left;
   background: #ffffff;
 }
 .sakeLotto-result .sakeLotto-result-wrap .sakeLotto-result-item:first-child {
   margin: 0 0 8px 0;
 }
+.sakeLotto-result .sakeLotto-result-wrap .sakeLotto-result-item .sakeLotto-result-item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 8px 0;
+}
 .sakeLotto-result-itemName {
   font-size: 18px;
+  font-weight: 700;
   width: 60%;
-  text-align: left;
 }
 .sakeLotto-result-itemType {
   font-size: 14px;
-  width: 30%;
+  width: 25%;
 }
 .sakeLotto-result-itemDegree {
   font-size: 14px;
   width: 10%;
 }
+.sakeLotto-result-itemDesc {
+  font-size: 14px;
+}
+
+/* sakeLotto - input
+-------------------- */
 .sakeLotto-options {
   clear: both;
   position: relative;
@@ -249,6 +278,8 @@ h2 {
   color: #333;
 }
 
+/* mediaQuery 
+-------------------- */
 @media only screen and (max-width: 620px) {
   .sakeLotto-result {
     max-width: 86%;
@@ -271,11 +302,14 @@ h2 {
   }
   .sakeLotto-result-itemType {
     font-size: 3vw;
-    width: 30%;
+    width: 25%;
   }
   .sakeLotto-result-itemDegree {
     font-size: 3vw;
     width: 10%;
+  }
+  .sakeLotto-result-itemDesc {
+    font-size: 3.4vw;
   }
   .sakeLotto-result .sakeLotto-result-wrap .sakeLotto-result-item {
     flex-wrap: wrap;

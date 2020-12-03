@@ -2,6 +2,7 @@
   <div id="app" class="wf-notosansjapanese">
     <sakeLottoHeader />
     <sakeLottoMain />
+    <sakeLottoList />
     <sakeLottoFooter />
   </div>
 </template>
@@ -9,6 +10,7 @@
 <script>
 import sakeLottoHeader from './components/sakeLotto_header.vue'
 import sakeLottoMain from './components/sakeLotto_main.vue'
+import sakeLottoList from './components/sakeLotto_list.vue'
 import sakeLottoFooter from './components/sakeLotto_footer.vue'
 
 export default {
@@ -16,6 +18,7 @@ export default {
   components: {
     sakeLottoHeader,
     sakeLottoMain,
+    sakeLottoList,
     sakeLottoFooter
   }
 }
