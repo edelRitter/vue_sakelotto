@@ -2,7 +2,38 @@
   <div class="sakeLotto-content">
     <h2>お酒を探す</h2>
 
-    <div class="sakeLotto-result" v-show="showFormValues">
+    <form id="sakeLotto-gacha" @submit.prevent action="/something" method="post">
+      <vue-aos animation-class="fadeIn animated">
+        <div class="sakeLotto-options">
+          <p class="sakeLotto-submit-area">
+            <input type="submit" name="submitbtn" id="submitbtn" class="sakeLotto-submit" @click="checkForm" value="くじをひく">  
+          </p>
+          <p v-if="errors.length" class="sakeLotto-error">
+            <span>以下の項目の入力が必要です</span>
+            <ul>
+              <li v-for="(error, key) in errors" :key="key">{{ error }}</li>
+            </ul>
+          </p>
+          <p class="sakeLotto-input">
+            <label for="drinkNum">オーダー数</label>
+            <input type="text" name="drinkNum" id="drinkNum" v-model="drinkNum" placeholder="何杯オーダーしますか？">
+            <span>杯</span>
+          </p>
+          <p class="sakeLotto-input">
+            <label class="typo__label">ドリンク種類</label>
+            <multiselect v-model="value" tag-placeholder="ドリンクの種類を選ぶ" placeholder="ドリンクの種類を選ぶ" label="name" track-by="name" :options="options" :multiple="true" :taggable="true" @tag="addTag"></multiselect>
+          </p>
+          <pre class="language-json">{{ value.name }}</pre>
+          <p class="sakeLotto-input">
+            <label for="drinkDegree">度数</label>
+            <input type="number" name="drinkDegree" id="drinkDegree" v-model="drinkDegree" placeholder="度数をお選びください" min="0">
+            <span>度以下</span>
+          </p>
+        </div>
+      </vue-aos>
+    </form>
+
+    <div class="sakeLotto-result" id="sakeLotto-result" ref="sakeLotto-result" v-show="showFormValues">
       <div class="sakeLotto-result-wrap">
         <vue-aos animation-class="fadeIn animated">
           <div class="sakeLotto-result-item">
@@ -45,37 +76,6 @@
         </vue-aos>
       </div>
     </div>
-
-    <form id="app" @submit="checkForm" action="/something" method="post">
-      <vue-aos animation-class="fadeIn animated">
-        <div class="sakeLotto-options">
-          <p class="sakeLotto-submit-area">
-            <input type="submit" name="submitbtn" id="submitbtn" class="sakeLotto-submit" value="くじをひく">  
-          </p>
-          <p v-if="errors.length" class="sakeLotto-error">
-            <span>以下の項目の入力が必要です</span>
-            <ul>
-              <li v-for="(error, key) in errors" :key="key">{{ error }}</li>
-            </ul>
-          </p>
-          <p class="sakeLotto-input">
-            <label for="drinkNum">オーダー数</label>
-            <input type="text" name="drinkNum" id="drinkNum" v-model="drinkNum" placeholder="2">
-            <span>杯</span>
-          </p>
-          <p class="sakeLotto-input">
-            <label class="typo__label">ドリンク種類</label>
-            <multiselect v-model="value" tag-placeholder="ドリンクの種類を選ぶ" placeholder="ドリンクの種類を選ぶ" label="name" track-by="name" :options="options" :multiple="true" :taggable="true" @tag="addTag"></multiselect>
-          </p>
-          <pre class="language-json">{{ value.name }}</pre>
-          <p class="sakeLotto-input">
-            <label for="drinkDegree">度数</label>
-            <input type="number" name="drinkDegree" id="drinkDegree" v-model="drinkDegree" placeholder="99" min="0">
-            <span>度以下</span>
-          </p>
-        </div>
-      </vue-aos>
-    </form>
   </div>
 </template>
 
@@ -94,7 +94,7 @@ export default {
   },
   data() {
     return {
-      showFormValues:true,
+      showFormValues:false,
       errors:[],
       drinkNum:null,
       drinkDegree:null,
@@ -115,7 +115,10 @@ export default {
   },
   methods:{
     checkForm: function(e) {
-      if(this.drinkNum && this.drinkDegree) return true;
+      if(this.drinkNum && this.drinkDegree) {
+        this.showFormValues = true;
+        this.errors = [];
+      }
       this.errors = [];
       if(!this.drinkNum) this.errors.push("オーダー数を入力してください");
       if(!this.drinkDegree) this.errors.push("度数を入力してください");

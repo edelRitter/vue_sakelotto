@@ -70,8 +70,8 @@
           </div>
           <div class="sakeLotto-list-item">
             <div class="sakeLotto-list-item-top">
-              <p class="sakeLotto-list-itemName">Jack Daniels</p>
-              <p class="sakeLotto-list-itemType">ウィスキー</p>
+              <p class="sakeLotto-list-itemName">アイテルスバッハー・カルトホイザー・ホーフベルグ・クローネンベルク・リースリング・トロッケンベーレンアウスレーゼ</p>
+              <p class="sakeLotto-list-itemType">ワイン</p>
               <p class="sakeLotto-list-itemDegree">30％</p>
             </div>
           </div>
