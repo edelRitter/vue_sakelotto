@@ -3,7 +3,7 @@
     <div class="sakeLotto-intro-bg">
       <div class="sakeLotto-banner">
         <sakeLottoUIShare />
-        <p><img src="../assets/images/bar_demo_logo.png" width="100%"></p>
+        <p class="sakeLotto-logo"><img src="../assets/images/bar_logo.png" width="100%"></p>
         <h1 class="wf-notosansjapanese"><span>酒</span>みくじへようこそ</h1>
         <p class="sakeLotto-banner-bdr"></p>
         <p>新しいお酒を飲んでみませんか</p>
@@ -74,6 +74,11 @@ h1 {
   background-repeat: no-repeat;
   background-position: top center;
   z-index: 0;
+}
+.sakeLotto-logo {
+  width: 120px;
+  height: auto;
+  margin: 0 auto;
 }
 .sakeLotto-banner-bdr {
   clear: both;

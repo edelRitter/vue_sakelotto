@@ -5,89 +5,131 @@
       <div class="sakeLotto-list-default">
         <div class="sakeLotto-list-wrap">
           <div class="sakeLotto-list-item">
-            <div class="sakeLotto-list-item-top">
-              <p class="sakeLotto-list-itemName">Jack Daniels</p>
-              <p class="sakeLotto-list-itemType">ウィスキー</p>
-              <p class="sakeLotto-list-itemDegree">30％</p>
-            </div>
+            <a href="">
+              <div class="sakeLotto-list-item-top">
+                <p class="sakeLotto-list-itemName">Jack Daniels</p>
+                <p class="sakeLotto-list-itemType">ウィスキー</p>
+                <p class="sakeLotto-list-itemDegree">30％</p>
+              </div>
+              <div class="sakeLotto-list-item-btm">
+                <p class="sakeLotto-list-shopName">会社名テキストテキスト</p>
+                <p class="sakeLotto-list-shopDesc">お酒詳細テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              </div>
+            </a>
           </div>
           <div class="sakeLotto-list-item">
-            <div class="sakeLotto-list-item-top">
-              <p class="sakeLotto-list-itemName">マール・ド・ブルゴーニュ</p>
-              <p class="sakeLotto-list-itemType">ワイン</p>
-              <p class="sakeLotto-list-itemDegree">45％</p>
-            </div>
+            <a href="">
+              <div class="sakeLotto-list-item-top">
+                <p class="sakeLotto-list-itemName">マール・ド・ブルゴーニュ</p>
+                <p class="sakeLotto-list-itemType">ワイン</p>
+                <p class="sakeLotto-list-itemDegree">45％</p>
+              </div>
+              <div class="sakeLotto-list-item-btm">
+                <p class="sakeLotto-list-shopName">会社名テキストテキスト</p>
+                <p class="sakeLotto-list-shopDesc">お酒詳細テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              </div>
+            </a>
           </div>
           <div class="sakeLotto-list-item">
-            <div class="sakeLotto-list-item-top">
-              <p class="sakeLotto-list-itemName">マール・ド・ブルゴーニュ</p>
-              <p class="sakeLotto-list-itemType">ワイン</p>
-              <p class="sakeLotto-list-itemDegree">45％</p>
-            </div>
+            <a href="">
+              <div class="sakeLotto-list-item-top">
+                <p class="sakeLotto-list-itemName">マール・ド・ブルゴーニュ</p>
+                <p class="sakeLotto-list-itemType">ワイン</p>
+                <p class="sakeLotto-list-itemDegree">45％</p>
+              </div>
+              <div class="sakeLotto-list-item-btm">
+                <p class="sakeLotto-list-shopName">会社名テキストテキスト</p>
+                <p class="sakeLotto-list-shopDesc">お酒詳細テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              </div>
+            </a>
           </div>
           <div class="sakeLotto-list-item">
-            <div class="sakeLotto-list-item-top">
-              <p class="sakeLotto-list-itemName">マール・ド・ブルゴーニュ</p>
-              <p class="sakeLotto-list-itemType">ワイン</p>
-              <p class="sakeLotto-list-itemDegree">45％</p>
-            </div>
+            <a href="">
+              <div class="sakeLotto-list-item-top">
+                <p class="sakeLotto-list-itemName">マール・ド・ブルゴーニュ</p>
+                <p class="sakeLotto-list-itemType">ワイン</p>
+                <p class="sakeLotto-list-itemDegree">45％</p>
+              </div>
+              <div class="sakeLotto-list-item-btm">
+                <p class="sakeLotto-list-shopName">会社名テキストテキスト</p>
+                <p class="sakeLotto-list-shopDesc">お酒詳細テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              </div>
+            </a>
           </div>
           <div class="sakeLotto-list-item">
-            <div class="sakeLotto-list-item-top">
-              <p class="sakeLotto-list-itemName">マール・ド・ブルゴーニュ</p>
-              <p class="sakeLotto-list-itemType">ワイン</p>
-              <p class="sakeLotto-list-itemDegree">45％</p>
-            </div>
+            <a href="">
+              <div class="sakeLotto-list-item-top">
+                <p class="sakeLotto-list-itemName">マール・ド・ブルゴーニュ</p>
+                <p class="sakeLotto-list-itemType">ワイン</p>
+                <p class="sakeLotto-list-itemDegree">45％</p>
+              </div>
+              <div class="sakeLotto-list-item-btm">
+                <p class="sakeLotto-list-shopName">会社名テキストテキスト</p>
+                <p class="sakeLotto-list-shopDesc">お酒詳細テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              </div>
+            </a>
           </div>
           <div class="sakeLotto-list-item">
-            <div class="sakeLotto-list-item-top">
-              <p class="sakeLotto-list-itemName">マール・ド・ブルゴーニュ</p>
-              <p class="sakeLotto-list-itemType">ワイン</p>
-              <p class="sakeLotto-list-itemDegree">45％</p>
-            </div>
+            <a href="">
+              <div class="sakeLotto-list-item-top">
+                <p class="sakeLotto-list-itemName">マール・ド・ブルゴーニュ</p>
+                <p class="sakeLotto-list-itemType">ワイン</p>
+                <p class="sakeLotto-list-itemDegree">45％</p>
+              </div>
+              <div class="sakeLotto-list-item-btm">
+                <p class="sakeLotto-list-shopName">会社名テキストテキスト</p>
+                <p class="sakeLotto-list-shopDesc">お酒詳細テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
+
       <div class="sakeLotto-list-header" @click="toggleAccordion">
         <p class="sakeLotto-list-accordion-txt"></p>
         <sakeLottoUIArrow />
       </div>
+
       <div class="message-body">
         <div class="sakeLotto-list-wrap">
           <div class="sakeLotto-list-item">
-            <div class="sakeLotto-list-item-top">
-              <p class="sakeLotto-list-itemName">Jack Daniels</p>
-              <p class="sakeLotto-list-itemType">ウィスキー</p>
-              <p class="sakeLotto-list-itemDegree">30％</p>
-            </div>
+            <a href="">
+              <div class="sakeLotto-list-item-top">
+                <p class="sakeLotto-list-itemName">Jack Daniels</p>
+                <p class="sakeLotto-list-itemType">ウィスキー</p>
+                <p class="sakeLotto-list-itemDegree">30％</p>
+              </div>
+              <div class="sakeLotto-list-item-btm">
+                <p class="sakeLotto-list-shopName">会社名テキストテキスト</p>
+                <p class="sakeLotto-list-shopDesc">お酒詳細テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              </div>
+            </a>
           </div>
           <div class="sakeLotto-list-item">
-            <div class="sakeLotto-list-item-top">
-              <p class="sakeLotto-list-itemName">マール・ド・ブルゴーニュ</p>
-              <p class="sakeLotto-list-itemType">ワイン</p>
-              <p class="sakeLotto-list-itemDegree">45％</p>
-            </div>
+            <a href="">
+              <div class="sakeLotto-list-item-top">
+                <p class="sakeLotto-list-itemName">マール・ド・ブルゴーニュ</p>
+                <p class="sakeLotto-list-itemType">ワイン</p>
+                <p class="sakeLotto-list-itemDegree">45％</p>
+              </div>
+              <div class="sakeLotto-list-item-btm">
+                <p class="sakeLotto-list-shopName">会社名テキストテキスト</p>
+                <p class="sakeLotto-list-shopDesc">お酒詳細テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              </div>
+            </a>
           </div>
           <div class="sakeLotto-list-item">
-            <div class="sakeLotto-list-item-top">
-              <p class="sakeLotto-list-itemName">アイテルスバッハー・カルトホイザー・ホーフベルグ・クローネンベルク・リースリング・トロッケンベーレンアウスレーゼ</p>
-              <p class="sakeLotto-list-itemType">ワイン</p>
-              <p class="sakeLotto-list-itemDegree">30％</p>
-            </div>
-          </div>
-          <div class="sakeLotto-list-item">
-            <div class="sakeLotto-list-item-top">
-              <p class="sakeLotto-list-itemName">Jack Daniels</p>
-              <p class="sakeLotto-list-itemType">ウィスキー</p>
-              <p class="sakeLotto-list-itemDegree">30％</p>
-            </div>
-          </div>
-          <div class="sakeLotto-list-item">
-            <div class="sakeLotto-list-item-top">
-              <p class="sakeLotto-list-itemName">Jack Daniels</p>
-              <p class="sakeLotto-list-itemType">ウィスキー</p>
-              <p class="sakeLotto-list-itemDegree">30％</p>
-            </div>
+            <a href="">
+              <div class="sakeLotto-list-item-top">
+                <p class="sakeLotto-list-itemName">アイテルスバッハー・カルトホイザー・ホーフベルグ・クローネンベルク・リースリング・トロッケンベーレンアウスレーゼ</p>
+                <p class="sakeLotto-list-itemType">ウィスキー</p>
+                <p class="sakeLotto-list-itemDegree">30％</p>
+              </div>
+              <div class="sakeLotto-list-item-btm">
+                <p class="sakeLotto-list-shopName">会社名テキストテキスト</p>
+                <p class="sakeLotto-list-shopDesc">お酒詳細テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -198,6 +240,10 @@ h2 {
 }
 .sakeLotto-list-item .sakeLotto-list-item-top .sakeLotto-list-itemDegree {
   width: 10%;
+}
+.sakeLotto-list-item-btm {
+  text-align: left;
+  font-size: 12px;
 }
 
 /* accordion Section 

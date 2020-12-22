@@ -26,7 +26,7 @@
           <pre class="language-json">{{ value.name }}</pre>
           <p class="sakeLotto-input">
             <label for="drinkDegree">度数</label>
-            <input type="number" name="drinkDegree" id="drinkDegree" v-model="drinkDegree" placeholder="度数をお選びください" min="0">
+            <input type="number" name="drinkDegree" id="drinkDegree" v-model="drinkDegree" placeholder="99" min="0">
             <span>度以下</span>
           </p>
         </div>
