@@ -2,6 +2,7 @@
   <div class="sakeLotto-list">
     <article class="sakeLotto-list-area" :class="accordionClasses">
       <h2>お酒の一覧</h2>
+      <p>お酒の詳細は一覧をクリックしてください。</p>
       <div class="sakeLotto-list-default">
         <div class="sakeLotto-list-wrap">
           <div class="sakeLotto-list-item">
@@ -202,6 +203,7 @@ h2 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin: 12px 0 0 0;
 }
 .sakeLotto-list-item {
   box-sizing: border-box;

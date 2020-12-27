@@ -31,6 +31,7 @@
           </p>
         </div>
       </vue-aos>
+      <div id="scrollresult"></div>
     </form>
 
     <div class="sakeLotto-result" id="sakeLotto-result" ref="sakeLotto-result" v-show="showFormValues">
@@ -115,9 +116,11 @@ export default {
   },
   methods:{
     checkForm: function(e) {
+      const el = this.$el.querySelector('#scrollresult');
       if(this.drinkNum && this.drinkDegree) {
         this.showFormValues = true;
         this.errors = [];
+        el.scrollIntoView({behavior: "smooth"});
       }
       this.errors = [];
       if(!this.drinkNum) this.errors.push("オーダー数を入力してください");
