@@ -4,8 +4,8 @@
     <div class="sakeLotto-adFloating" v-if="!isHidden">
       <div class="sakeLotto-adFloating-bg">
         <div v-on:click="isHidden = true" class="sakeLotto-adFloating-close"></div>
-        <a href="">
-          <p><img src="../assets/images/ad_demo_image.png" width="1080"></p>
+        <a href="https://www.sakemikuji.jp/privacy.html">
+          <p><img src="../assets/images/ad_demo_image.png" alt="お酒みくじ広告" width="1080"></p>
         </a>
       </div>
     </div>
