@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^3.7.0",
     "vue": "^2.6.12",
+    "vue-adsense": "^1.0.1",
     "vue-analytics": "^5.22.1",
     "vue-aos": "^1.1.0",
     "vue-gtag": "^1.10.0",

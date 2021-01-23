@@ -4,9 +4,12 @@
     <div class="sakeLotto-adFloating" v-if="!isHidden">
       <div class="sakeLotto-adFloating-bg">
         <div v-on:click="isHidden = true" class="sakeLotto-adFloating-close"></div>
-        <a href="https://www.sakemikuji.jp/privacy.html">
-          <p><img src="../assets/images/ad_demo_image.png" alt="お酒みくじ広告" width="1080"></p>
-        </a>
+          <adsense
+            ad-client="ca-pub-2519994930393747"
+            ad-slot="★2"
+            style="display:block"
+            ad-format="auto">
+          </adsense>
       </div>
     </div>
     <p class="sakeLotto-footer-warning">
