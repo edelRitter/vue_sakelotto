@@ -10,7 +10,9 @@
   "dependencies": {
     "core-js": "^3.7.0",
     "vue": "^2.6.12",
+    "vue-analytics": "^5.22.1",
     "vue-aos": "^1.1.0",
+    "vue-gtag": "^1.10.0",
     "vue-multiselect": "^2.1.6",
     "vue-social-sharing": "^3.0.3"
   },
